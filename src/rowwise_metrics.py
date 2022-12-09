@@ -12,7 +12,7 @@ def direct_mutual_information(x, y, bins=100):
     return - mutual_info_score(None, None, contingency=c_xy)
 
 def mutual_information(a, b, bins=100):
-    hgram, _, _ = np.histogram2d(a, b)
+    hgram, _, _ = np.histogram2d(a, b, bins=bins)
     pxy = hgram / float(np.sum(hgram))
     px = np.sum(pxy, axis=1)
     py = np.sum(pxy, axis=0)
