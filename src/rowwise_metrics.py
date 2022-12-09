@@ -5,7 +5,7 @@ def euclid(a, b):
     return np.linalg.norm(a - b)
 
 def cosine(a, b):
-    return - np.dot(a, b) / np.linalg.norm(a) / np.linalg.norm(b)
+    return 1 - np.dot(a, b) / np.linalg.norm(a) / np.linalg.norm(b)
 
 def direct_mutual_information(x, y, bins=100):
     c_xy, _, _ = np.histogram2d(x, y, bins)
