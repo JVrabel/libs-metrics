@@ -8,7 +8,7 @@ import colorlover as cl
 
 def plot_spectra(
     spectra: np.ndarray,
-    calibration: None | np.array=None,
+    calibration: None | np.ndarray=None,
     title: None | str=None,
     labels: None | list[str]=None,
     colormap: None | list=cl.scales['12']['qual']['Paired'],
