@@ -7,11 +7,11 @@ def euclid(a, b):
 def cosine(a, b):
     return 1 - np.dot(a, b) / np.linalg.norm(a) / np.linalg.norm(b)
 
-def direct_mutual_information(x, y, bins=100):
+def direct_mutual_information(x, y, bins=1000):
     c_xy, _, _ = np.histogram2d(x, y, bins)
     return - mutual_info_score(None, None, contingency=c_xy)
 
-def mutual_information(a, b, bins=100):
+def mutual_information(a, b, bins=1000):
     hgram, _, _ = np.histogram2d(a, b, bins=bins)
     pxy = hgram / float(np.sum(hgram))
     px = np.sum(pxy, axis=1)
